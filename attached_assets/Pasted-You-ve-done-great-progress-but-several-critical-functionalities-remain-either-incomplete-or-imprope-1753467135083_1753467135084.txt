@@ -1,0 +1,130 @@
+You’ve done great progress, but several critical functionalities remain either incomplete or improperly implemented.
+
+Please read this carefully and make no assumptions. You must fully follow the specifications and correct all remaining issues. This is not optional or exploratory — we need a finished, high-quality, real-use productivity platform as originally defined.
+
+❗ MAJOR ISSUES TO FIX
+1. ✅ Task / Event / Goal / Reminder creation forms are still basic
+They must all include and persist the following fields:
+
+Title
+
+Description (optional)
+
+Date / Start time / End time
+
+Priority (e.g. P1, P2, etc.)
+
+Tags
+
+Group/project
+
+Location (optional string)
+
+Recurrence rules
+
+Linked items (i.e. link a reminder to a task or goal)
+
+Sub-items (subtasks or sub-goals)
+
+You may reuse schema and UI logic across sections (DRY), but all forms must be complete, reactive, validated, and stored in Dexie (IndexedDB) immediately.
+
+2. 🔁 Instant Live Sync with Calendar
+When a task, event, goal, or reminder is created or modified, it must automatically show up at the correct date and time in the Calendar view (Day / Week / Month).
+No reloads. No manual syncing.
+Use reactive local state (Zustand or Jotai) to handle this live connection.
+
+3. 📆 Streak calendar in Analytics is broken
+Right now, the streak calendar says "coming soon."
+This must be implemented and functional. It should:
+
+Show streaks for completed tasks/goals per day
+
+Calculate consecutive days of activity (e.g., habit tracking)
+
+Update immediately when a task/goal is marked complete
+
+4. 🧱 NO Remote Database — Offline-First Only
+You mentioned that I should consider a database.
+
+This is incorrect and must be corrected.
+The app is explicitly designed as an offline-first app using local-only data.
+
+You must not require or mention external cloud databases
+
+Use Dexie.js (IndexedDB) to store all user data locally
+
+Data must persist offline, sync instantly, and be 100% usable with no internet
+
+Reaffirm and re-architect wherever needed to comply with this.
+
+✅ WHAT’S ALREADY GOOD — KEEP IT
+✅ Complete calendar with day/week/month views
+✅ RTL support and full i18n for Arabic, Spanish, French, etc.
+✅ Clean professional UI (good progress)
+✅ IndexedDB integration
+✅ No login / no cloud / no backend
+✅ Sidebar & top bar cleaned up
+✅ Modular scalable React + TypeScript codebase
+
+📌 NEXT CRITICAL STEPS
+✅ Fix and upgrade all Add/Create forms with full field support across:
+
+Tasks
+
+Events
+
+Goals
+
+Reminders
+
+🔁 Ensure they are reactive:
+
+Any creation must sync live to:
+
+Dashboard
+
+Calendar
+
+Analytics
+
+Streaks
+
+📊 Implement streak calendar under Analytics
+
+Show daily streaks (task/goal completion)
+
+Use a heatmap or simple calendar-style streak UI
+
+Fully reactive — reflects changes instantly
+
+🧪 Add robust testing
+
+Test task creation, streak calculations, live sync behavior, and localization switching
+
+Include unit + integration tests using vitest or similar
+
+🔐 Final security & safety pass
+
+Sanitize all user input
+
+Type-safety across all stores
+
+Error boundaries and validation
+
+Offline resilience and fallback
+
+🧠 Reminder
+This app is meant to be a fully local-first Notion + Todoist + Google Calendar hybrid, built for serious personal productivity with:
+
+Professional design
+
+Offline-first behavior
+
+Reactive architecture
+
+No missing logic
+
+Secure, scalable, modular components
+
+Do not leave anything incomplete or unlinked. Every feature must be real, connected, and reliable.
+

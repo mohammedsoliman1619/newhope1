@@ -1,0 +1,192 @@
+I need the following critical enhancements and refinements.
+
+This is not a prototype. The app must meet FAANG-level standards — enterprise-grade, secure, tested, and truly production-ready.
+
+🚨 MISSION CRITICAL DIRECTIVES
+❗ DO NOT delay, skip, or partially implement anything — no missing logic, no unfinished sections.
+
+❗ All features and functions must be fully implemented, type-safe, tested, and connected.
+
+✅ Architecture must be modular, scalable, and runtime-error-proof — no dangling imports, broken state, or dead features.
+
+✅ Ensure security hardening across the code: sanitize inputs, avoid unsafe state mutations, and follow best practices.
+
+💯 Code must be clean, typed, documented, and safely export all hooks, constants, and actions.
+
+🧪 Include unit tests and integration tests for all critical functions (task creation, calendar sync, localization, Dexie state).
+
+⚙️ CORE STACK
+React + TypeScript (Vite bundler)
+
+Tailwind CSS (use 8pt spacing grid for consistent layout)
+
+React Router
+
+Zustand or Jotai (for reliable local state)
+
+IndexedDB via Dexie.js (or idb)
+
+Vite PWA plugin
+
+lucide-react or Tabler Icons (modern, lightweight icons only)
+
+fullcalendar, dnd-kit, recharts
+
+i18next or react-intl (no hardcoded text)
+
+🖥️ DESIGN + UX STANDARDS
+100% Responsive: works seamlessly on phones, tablets, desktops (Windows, Android, iOS)
+
+Spacing must follow 8pt design grid – no misaligned or oversized elements
+
+Professional UI with clean padding, consistent layout, and intuitive spacing
+
+Light/Dark mode toggle with safe transitions
+
+Accessible by default (semantic markup, a11y roles, focus traps, etc.)
+
+No “offline user” or “offline ready” badges anywhere in UI (remove top bar and sidebar mentions)
+
+No unnecessary icons: remove Search and Notifications icons in Dashboard top bar
+
+📋 REQUIRED MODULE IMPROVEMENTS
+✅ DASHBOARD
+🔧 Remove Search and Notifications icons from top right
+
+🔁 Ensure live updates — when a task, event, goal, or reminder is created/edited elsewhere, it reflects instantly here
+
+📊 Display all items in real time by correct time, tag, date, group, and status
+
+✅ TASKS
+Must support full task creation features:
+
+ Title
+
+ Due date
+
+ Start date
+
+ Priority (P1–P4)
+
+ Grouping
+
+ Tagging
+
+ Location (text or geotag if browser supports)
+
+ Recurrence rules (“every Monday”, “every 3 days”)
+
+ Subtasks and checklist
+
+All fields must be live-bound to the state and update calendar + analytics instantly
+
+🔁 All these features must also apply to: Create Goal, Create Reminder, and Create Event
+
+✅ CALENDAR
+The Month view is currently missing — implement fully
+
+Support Day / Week / Month views, with smooth drag-to-reschedule
+
+Ensure all items (tasks, reminders, events) display in correct time slots
+
+Calendar state must sync with all sections in real time
+
+✅ SETTINGS
+Remove Notifications and Accessibility sections — not needed
+
+Remove any "offline/local user" text or icons from bottom sidebar
+
+Add localization for additional languages:
+
+Arabic (RTL layout support)
+
+German
+
+Hindi
+
+Portuguese (Brazil)
+
+Chinese (Simplified)
+
+Japanese
+
+Korean
+
+English, Spanish, and French are already implemented — leave them
+
+All strings on every screen must be translatable — no hardcoded text
+
+🌐 LOCALIZATION
+Use i18next or react-intl
+
+All strings must be in translation files (not inline)
+
+Support LTR/RTL layout switching (especially for Arabic)
+
+Auto-detect and fallback language support
+
+Locale-specific date/time formatting
+
+🔁 LIVE REACTIVE LOGIC
+All components must reactively share state (Zustand/Jotai): no stale views
+
+Creating or updating a task, goal, event, or reminder should:
+
+Update calendar
+
+Reflect in dashboard
+
+Update analytics
+
+Show tags in tag filters immediately
+
+No refresh or re-fetch should be needed
+
+🧪 TESTING & STABILITY
+Include unit tests for:
+
+Task creation
+
+Calendar sync logic
+
+Goal completion
+
+State mutations in Zustand or Jotai
+
+Include integration tests for:
+
+Localization switching
+
+Offline persistence with Dexie
+
+Realtime syncing between views
+
+Wrap all async actions with error handling + toast feedback
+
+Add error boundaries for UI crashes
+
+Ensure no circular imports, missing exports, or runtime crashes
+
+🛡️ SECURITY & SAFETY
+All input fields should be XSS-safe, sanitized
+
+Never mutate state unsafely — always use set() or safe actions
+
+No global state hacks or localStorage side-effects without fallback handling
+
+PIN lock option must not expose user input
+
+Never leave dangling promise calls or unhandled rejections
+
+📌 FINAL REMINDERS
+🔁 All features must be reactive, real, and fully connected
+
+🎯 No mockups or placeholder logic — use real schema, types, and Dexie persistence
+
+📦 All exports (state, components, actions) must be defined and used cleanly
+
+🧠 UX must be tight, accessible, and spaced correctly on all screen sizes
+
+🧼 Remove any UI clutter, placeholder buttons, or debug logs
+
+This app should feel like a blazing-fast local version of Notion + Todoist + Google Calendar — professional, private, fast, and 100% offline-capable.

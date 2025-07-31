@@ -1,0 +1,147 @@
+I want to build a scalable, offline-first Progressive Web App (PWA) using Replit. The app is a complete, professional-grade personal productivity platform, structured into distinct modules, fully localized, and designed to scale to millions of users, storing all data locally — with no backend, no login, and no cloud dependency.
+
+This is for serious, long-term use. I need FAANG-level, enterprise-grade, production-ready code with real logic, real components, and a fully modular architecture.
+
+🚨 Important Instruction:
+Do not delay, skip, or leave any features, sections, or logic unfinished. The current issues are a result of the AI agent leaving some modules incomplete, leading to runtime crashes.
+Every function, export, and dependency must be implemented properly with full type safety and testing. All modules must be closed/completed — no open functions, unexported constants, missing schemas, or broken imports.
+Also ensure better architecture practices are used to prevent runtime errors, circular dependencies, or inconsistent states.
+
+🧱 Architecture & Tech Stack
+React + TypeScript (Vite for bundling)
+
+Tailwind CSS for styling
+
+React Router for routing
+
+IndexedDB via Dexie.js (or idb) for local storage
+
+Vite PWA plugin for offline support
+
+Zustand (or Jotai) for state management
+
+lucide-react or Tabler Icons
+
+fullcalendar, dnd-kit, recharts
+
+i18next or react-intl for full localization support
+
+🖥 UX & Functional Requirements
+100% Responsive (mobile, tablet, desktop)
+
+Clean, professional design
+
+Light/Dark mode toggle
+
+Full offline support
+
+Accessibility built-in
+
+Real-time updates between all components
+
+All features work with local state only
+
+No placeholders, no mockups — all logic must be real
+
+📦 App Modules
+📋 Tasks
+Like Todoist, fully offline:
+
+Projects, sections, priorities, subtasks
+
+Smart input for due/start dates
+
+Recurring tasks (“every Monday”)
+
+Filters, tags, smart views (Today, Upcoming)
+
+Inbox project, drag-and-drop, keyboard shortcuts
+
+Undo/redo, auto-focus, instant sync with Calendar & Analytics
+
+📅 Calendar
+Day/week/month views
+
+Drag & drop rescheduling
+
+Time-blocking
+
+Instant sync with Tasks & Reminders
+
+🎯 Goals
+Milestones, habits, streaks
+
+Category-based (health, work, etc.)
+
+Progress bar, real-time sync with Analytics
+
+⏰ Reminders
+One-time and recurring
+
+Local push notifications
+
+Snooze/reschedule/complete inline
+
+Auto-linked with tasks/goals
+
+📊 Analytics
+Heatmaps, streaks, tag usage
+
+Task charts per week/project
+
+Live updates on all changes
+
+⚙️ Settings
+Light/dark mode
+
+Language selection
+
+Date/time format
+
+Notifications
+
+Local data manager (reset, export, import)
+
+Accessibility: font size, reduced motion
+
+PIN lock
+
+🌍 Localization
+Use i18next or react-intl
+
+No hardcoded strings — fully translatable
+
+Supports top 10 languages: English, Spanish, Mandarin, Arabic, French, Hindi, Russian, Portuguese (Brazil), German, Japanese
+
+RTL/LTR support
+
+Locale-based formatting
+
+🔁 Real-Time Live Behavior
+Add a task → Calendar/Analytics update instantly
+
+Create a tag → Tag list updates globally
+
+Complete goal → Analytics reflect immediately
+
+Everything is reactive and local — no reload needed
+
+🧪 Code Requirements
+Fully implemented, real logic — no placeholders
+
+SOLID, DRY, KISS principles
+
+Fully type-safe and tested
+
+Reusable, modular components
+
+Error boundaries and feedback states
+
+No console logs, unfinished exports, or commented-out stubs
+
+All state/actions must be defined and functional
+
+📌 Final Notes
+This app should feel like a local-first Notion + Todoist + Google Calendar built for power users — beautifully designed, fast, robust, and fully offline.
+Please make sure every section is complete and properly exported. No partial functions, dangling logic, or skipped modules.
+If something is named in the imports, make sure it’s fully implemented and exported as expected.
